@@ -1,0 +1,14 @@
+{
+  "name": "quest-board",
+  "description": "A board where adventurers can sign up for quests",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
