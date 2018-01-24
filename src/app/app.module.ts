@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { QuestListComponent } from './quest-list/quest-list.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    QuestListComponent
   ],
   imports: [
     BrowserModule
