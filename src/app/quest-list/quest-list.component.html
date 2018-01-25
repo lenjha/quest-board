@@ -1,14 +1,20 @@
 <div class="quest-list">
+
+  <p>
+    The board is stained unnaturally, and slightly warped from water damage.  It smells as though someone overcompensated for a hideous reek with cheap perfume.
+  </p>
+
   <div *ngFor="let quest of quests | async" class="quest-details">
-    <h3>{{quest.title}}</h3>
+    <h3 (click)="goToQuestDetails(quest)">{{quest.title}}</h3>
     <h4>{{quest.questGiver}}</h4>
     <p>{{quest.description}}</p>
-    <ul>
+    <!-- <ul>
       <li *ngFor="let objective of quest.objectives">
         {{objective}}
       </li>
     </ul>
-    <p><b>{{quest.reward}}</b></p>
+    <p><b>{{quest.coinReward}}</b></p> -->
+
   </div>
 
 </div>

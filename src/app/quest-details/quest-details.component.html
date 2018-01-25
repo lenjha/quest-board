@@ -1,0 +1,10 @@
+<h3>{{(questToDisplay | async)?.title}}</h3>
+
+<p>{{(questToDisplay | async)?.questGiver}}</p>
+<p>{{(questToDisplay | async)?.description}}</p>
+<ul>
+  <li *ngFor="let objective of (questToDisplay | async)?.objectives">
+    {{objective}}
+  </li>
+</ul>
+<p><b>Reward:</b> {{(questToDisplay | async)?.coinReward}} Zeni</p>

@@ -11,6 +11,7 @@ import { routing } from './app.routing';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { QuestDetailsComponent } from './quest-details/quest-details.component';
 //^ import Firebase
 
 export const firebaseConfig = {
@@ -25,7 +26,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     QuestListComponent,
-    HomeComponent
+    HomeComponent,
+    QuestDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FirebaseListObservable } from 'angularfire2/database';
-import { FirebaseObjectObservable } from 'angularfire2/database';
 import { Router } from '@angular/router';
 import { QuestService } from '../quest.service';
+import { FirebaseListObservable } from 'angularfire2/database';
+import { FirebaseObjectObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-quest-list',
@@ -11,7 +11,9 @@ import { QuestService } from '../quest.service';
   providers: [QuestService]
 })
 export class QuestListComponent implements OnInit {
+
   quests: FirebaseListObservable<any[]>;
+  currentRoute: string = this.router.url;
 
   constructor(
     private router: Router,
@@ -22,7 +24,7 @@ export class QuestListComponent implements OnInit {
     this.quests = this.questService.getQuests();
   }
 
-  goToDetailPage(clickedQuest){
+  goToQuestDetails(clickedQuest){
     this.router.navigate(['quests', clickedQuest.$key]);
   }
 
