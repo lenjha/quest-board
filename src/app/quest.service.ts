@@ -8,6 +8,7 @@ export class QuestService {
 
   constructor(private database: AngularFireDatabase) {
     this.quests = database.list('quests');
+    console.log(this.quests);
   }
 
   getQuests() {

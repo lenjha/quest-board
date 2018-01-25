@@ -7,7 +7,8 @@ import { QuestService } from '../quest.service';
 @Component({
   selector: 'app-quest-list',
   templateUrl: './quest-list.component.html',
-  styleUrls: ['./quest-list.component.css']
+  styleUrls: ['./quest-list.component.css'],
+  providers: [QuestService]
 })
 export class QuestListComponent implements OnInit {
   quests: FirebaseListObservable<any[]>;

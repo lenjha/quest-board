@@ -1,14 +1,14 @@
 <div class="quest-list">
-  <div *ngFor="quest of quests | async" class="quest-details">
-    <h3>{{(quest | async)?.title}}</h3>
-    <h4>{{(quest | async)?.questGiver}}</h4>
-    <p>{{(quest | async)?.description}}</p>
+  <div *ngFor="let quest of quests | async" class="quest-details">
+    <h3>{{quest.title}}</h3>
+    <h4>{{quest.questGiver}}</h4>
+    <p>{{quest.description}}</p>
     <ul>
-      <!-- <li *ngFor="objective of (quest | async)?.objectives | async">
+      <li *ngFor="let objective of quest.objectives">
         {{objective}}
-      </li> -->
+      </li>
     </ul>
-    <p><b>{{(quest | async)?.reward}}</b></p>
+    <p><b>{{quest.reward}}</b></p>
   </div>
 
 </div>
