@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quest-list.component.css']
 })
 export class QuestListComponent implements OnInit {
-
+  quests: FirebaseListObservable<any[]>;
+  
   constructor() { }
 
   ngOnInit() {

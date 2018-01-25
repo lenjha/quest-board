@@ -1,5 +1,8 @@
-<p>
-  quest-list works!
-</p>
+<div class="quest-list">
+  <div *ngFor="quest of quests" class="quest-details">
+    <h3>{{quest.title}}</h3>
+  </div>
+
+</div>
 
 <a routerLink="">Go back to the bar</a>
