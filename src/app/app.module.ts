@@ -14,6 +14,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { QuestDetailsComponent } from './quest-details/quest-details.component';
 import { BarkeepComponent } from './barkeep/barkeep.component';
 import { AddQuestComponent } from './add-quest/add-quest.component';
+import { EditQuestComponent } from './edit-quest/edit-quest.component';
 //^ import Firebase
 
 export const firebaseConfig = {
@@ -31,7 +32,8 @@ export const firebaseConfig = {
     HomeComponent,
     QuestDetailsComponent,
     BarkeepComponent,
-    AddQuestComponent
+    AddQuestComponent,
+    EditQuestComponent
   ],
   imports: [
     BrowserModule,

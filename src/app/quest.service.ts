@@ -23,4 +23,15 @@ export class QuestService {
     return this.database.object('quests/' + questId);
   }
 
+  updateQuest(localUpdatedQuest){
+    let questEntryInFirebase = this.getQuestById(localUpdatedQuest.$key);
+    questEntryInFirebase.update({
+      title: localUpdatedQuest.title,
+      questGiver: localUpdatedQuest.questGiver,
+      description: localUpdatedQuest.description,
+      objectives: localUpdatedQuest.objectives,
+      coinReward: localUpdatedQuest.coinReward
+    });
+  }
+
 }

@@ -8,12 +8,12 @@
     <h3 (click)="goToQuestDetails(quest)">{{quest.title}}</h3>
     <h4>{{quest.questGiver}}</h4>
     <p>{{quest.description}}</p>
-    <!-- <ul>
-      <li *ngFor="let objective of quest.objectives">
-        {{objective}}
-      </li>
-    </ul>
-    <p><b>{{quest.coinReward}}</b></p> -->
+
+    <hr>
+
+    <div *ngIf="currentRoute === '/barkeep'">
+      <app-edit-quest [selectedQuest]="quest"></app-edit-quest>
+    </div>
 
   </div>
 

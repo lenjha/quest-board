@@ -4,16 +4,29 @@
     As barkeep, you have the option of adding or removing quests from the bulletin!
   </p>
 
-  <label>Title: </label>
-  <input #newTitle>
-  <label>Quest Giver: </label>
-  <input #newQuestGiver>
-  <label>Description: </label>
-  <input #newDescription>
-  <!-- OBJECTIVES AS LIST? -->
-  <label>Objectives: </label>
-  <input #objectives>
-  <label>Coinage as Reward: </label>
-  <input #coinReward>
+  <label>Title: </label><br>
+  <input #newTitle><br>
+  <label>Quest Giver: </label><br>
+  <input #newQuestGiver><br>
+  <label>Description: </label><br>
+  <input #newDescription><br>
+  <label>Objectives: </label><br>
+  <input #newObjectives><br>
+  <label>Coinage as Reward: </label><br>
+  <input type="number" #newCoinReward><br>
+
+  <button (click)="submitQuest(
+    newTitle.value,
+    newQuestGiver.value,
+    newDescription.value,
+    newObjectives.value,
+    newCoinReward.value);
+      newTitle.value='';
+      newQuestGiver.value='';
+      newDescription.value='';
+      newObjectives.value='';
+      newCoinReward.value=''">Submit!</button>
+
+  <button (click)="cancelAddNewQuest()">Cancel!</button>
 
 </div>

@@ -1,0 +1,14 @@
+<h3>Edit Album</h3>
+
+<label>Title: </label><br>
+<input [(ngModel)]="selectedQuest.title"><br>
+<label>Quest Giver: </label><br>
+<input [(ngModel)]="selectedQuest.questGiver"><br>
+<label>Description: </label><br>
+<input [(ngModel)]="selectedQuest.description"><br>
+<label>Objectives: </label><br>
+<input [(ngModel)]="selectedQuest.objectives"><br>
+<label>Coinage as Reward: </label><br>
+<input type="number" [(ngModel)]="selectedQuest.coinReward"><br>
+
+<button (click)="updateQuest(selectedQuest)">Submit Edit!</button>

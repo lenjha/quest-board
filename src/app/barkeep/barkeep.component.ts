@@ -12,6 +12,8 @@ import { Quest } from '../quest.model';
 
 export class BarkeepComponent implements OnInit {
 
+  showNewQuestForm: boolean = false;
+
   constructor(
     private questService: QuestService
   ) { }
@@ -19,4 +21,13 @@ export class BarkeepComponent implements OnInit {
   ngOnInit() {
   }
 
+  toggleAddNewQuestForm(){
+    this.showNewQuestForm = !this.showNewQuestForm;
+    //"this" as in "this class's"
+  }
+
+  addNewQuest(newQuest){
+    this.toggleAddNewQuestForm();
+    this.questService.addQuest(newQuest);
+  }
 }

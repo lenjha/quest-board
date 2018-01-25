@@ -1,3 +1,8 @@
 <h1>BARKEEPS ONLY, YO!</h1>
-<p>add a new quest</p>
 <p>list quests with option to edit or delete</p>
+
+<button *ngIf="!showNewQuestForm" (click)="toggleAddNewQuestForm()">Add a new quest!</button>
+
+<app-add-quest *ngIf="showNewQuestForm" (addQuestSender)="addNewQuest($event)" (cancelNewQuestSender)="toggleAddNewQuestForm()"></app-add-quest>
+
+<app-quest-list></app-quest-list>
