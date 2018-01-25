@@ -1,0 +1,31 @@
+{ "quests": [
+    {
+      "title": "Piper At The Gates of Dawn",
+      "questGiver": "Old Floyd Pinkus",
+      "description": "Old Floyd Pinkus is looking for his bike, who one Piper borrowed.",
+      "objectives": ["Find Old Floyd Pinkus's bike", "Kill Piper"],
+      "coinReward": "1"
+    },
+    {
+      "title": "Dialate",
+      "questGiver": "Annie DeFranco",
+      "description": "Someone's giving birth",
+      "objectives": ["Help Annie the Midwife"],
+      "coinReward": "2"
+    },
+    {
+      "title": "Axes Bold as Love",
+      "questGiver": "Jimothy Hjendriksohnn",
+      "description": "Jimothy needs you to take his axe two towns over to get it sharpened professionally.  Also, kill wolves.",
+      "objectives": ["Deliver Jimothy's Axe to New Hamp Shire", "Kill 15 wolves", "Infiltrate the People for the Eulogical Training of Animalfolk"],
+      "coinReward": "50"
+    },
+    {
+      "title": "Fire the Bass",
+      "questGiver": "Old Man Epicodus",
+      "description": "Epicodus can't hear his music; use magic to increase the bass.",
+      "objectives": ["Turn it up", "Join the fish fry."],
+      "coinReward": "7000"
+    }
+  ]
+}
