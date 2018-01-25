@@ -1,6 +1,6 @@
 <h3>{{(questToDisplay | async)?.title}}</h3>
 
-<p>{{(questToDisplay | async)?.questGiver}}</p>
+<p><b>Quest By:</b> {{(questToDisplay | async)?.questGiver}}</p>
 <p>{{(questToDisplay | async)?.description}}</p>
 <ul>
   <li *ngFor="let objective of (questToDisplay | async)?.objectives">
