@@ -34,4 +34,9 @@ export class QuestService {
     });
   }
 
+  deleteQuest(localQuestToDelete){
+    let questEntryInFirebase = this.getQuestById(localQuestToDelete.$key);
+    questEntryInFirebase.remove();
+  }
+
 }

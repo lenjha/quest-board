@@ -22,4 +22,10 @@ export class EditQuestComponent implements OnInit {
     this.questService.updateQuest(selectedQuest);
   }
 
+  deleteQuest(questToDelete){
+    if(confirm("You sure?")){
+      this.questService.deleteQuest(questToDelete);
+    }
+  }
+
 }
