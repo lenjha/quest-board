@@ -12,7 +12,9 @@
     <hr>
 
     <div *ngIf="currentRoute === '/barkeep'">
-      <app-edit-quest [selectedQuest]="quest"></app-edit-quest>
+      <app-edit-quest *ngIf="showEditForm" [selectedQuest]="quest" (cancelEditEmitter)="toggleEditForm()"></app-edit-quest>
+      <!-- cancelEditEmitter: event listener for emitter in edit-quest component -->
+      <button *ngIf="!showEditform" (click)="toggleEditForm()">Edit</button>
     </div>
 
   </div>

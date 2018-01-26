@@ -12,6 +12,7 @@ import { FirebaseObjectObservable } from 'angularfire2/database';
 })
 export class QuestListComponent implements OnInit {
 
+  showEditForm: boolean = false;
   quests: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
 
@@ -26,6 +27,10 @@ export class QuestListComponent implements OnInit {
 
   goToQuestDetails(clickedQuest){
     this.router.navigate(['quests', clickedQuest.$key]);
+  }
+
+  toggleEditForm(){
+    this.showEditForm = !this.showEditForm;
   }
 
 }

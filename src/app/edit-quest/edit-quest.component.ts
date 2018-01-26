@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { QuestService } from '../quest.service';
 
 @Component({
@@ -10,6 +10,7 @@ import { QuestService } from '../quest.service';
 
 export class EditQuestComponent implements OnInit {
   @Input() selectedQuest;
+  @Output() cancelEditEmitter = new EventEmitter;
 
   constructor(
     private questService: QuestService
@@ -26,6 +27,10 @@ export class EditQuestComponent implements OnInit {
     if(confirm("You sure?")){
       this.questService.deleteQuest(questToDelete);
     }
+  }
+
+  cancelEditQuest(){
+    this.cancelEditEmitter.emit();
   }
 
 }
